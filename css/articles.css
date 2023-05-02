@@ -1,0 +1,56 @@
+.code-container {
+    width: 90%;
+    margin: auto;
+    height: auto;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0px 5px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: #fff;
+    font-size: 18pt;
+     overflow-x: auto;
+  white-space: nowrap;
+  } 
+  .copy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s all;
+    
+  }
+  .copy-button:hover{
+    transform: scale(1.1);
+    background-color: green;
+  }
+  #gold{
+    color: gold;
+  }
+  #green{
+    color: green;
+  }
+  #blue{
+    color: blue;
+  
+  }
+
+#red{
+  color: red;
+}
+#gris{
+    color: darkcyan;
+}
+.copy-button:disabled {
+    transition: none;
+  }
+.language-html{
+    float: left;
+}
+  

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="css/articles.css">
+   
+</head>
+<body>
+    <div class="code-container">
+        <pre><code class="language-html">
+          <!-- Aquí va tu código de ejemplo -->
+          <span id="blue">def</span> update():
+            time.sleep(4)
+            context.close()
+            browser.close()
+        </code></pre>
+        <button class="copy-button">Copiar</button>
+      </div>
+
+      <!--Boton de descarga de CV--->
+      <a href="MODIFICACIÓN HORARIO Y REMUNERACIÓN BISMARK1.pdf" download>
+        <button>Descargar mi CV</button>
+      </a>
+      
+    <script>
+        const copyButton = document.querySelector('.copy-button');
+const codeContainer = document.querySelector('.code-container');
+const codeSnippet = codeContainer.querySelector('code');
+function resetButton() {
+    document.querySelector(".copy-button").textContent = 'Copiar';
+    document.querySelector(".copy-button").style.backgroundColor = 'blue';
+  }
+
+copyButton.addEventListener('click', () => {
+  const range = document.createRange();
+  range.selectNode(codeSnippet);
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+  document.querySelector(".copy-button").textContent = 'Copiado';
+  document.querySelector(".copy-button").style.backgroundColor='red';
+  setTimeout(resetButton, 1500);
+  
+  //document.querySelector(".copy-button").disable= true;
+  //document.querySelector(".copy-button").style.transform='none';
+
+});
+
+    </script>
+    <!--Contador de Visitas-->
+    <script>
+      // Recupera el número de visitas almacenado en localStorage
+let visitas = localStorage.getItem('visitas');
+
+// Si no hay ningún valor almacenado, inicializa el contador en 0
+if (!visitas) {
+  visitas = 0;
+}
+
+// Incrementa el contador en 1 y almacena el nuevo valor en localStorage
+visitas++;
+localStorage.setItem('visitas', visitas);
+
+// Muestra el número de visitas en la consola
+console.log(`Esta página ha sido visitada ${visitas} veces.`);
+
+    </script>
+</body>
+</html>

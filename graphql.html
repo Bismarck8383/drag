@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphQL</title>
+    <link rel="stylesheet" href="css/articles.css">
+</head>
+<body>
+    <div class="container-article">
+        <h2>Que es GraphQL?</h2>
+        <p>GraphQL es un lenguaje de consulta y manipulación de datos de
+             código abierto desarrollado por Facebook en 2012 y lanzado como 
+             proyecto de código abierto en 2015. Se utiliza para obtener datos 
+             de una API de manera eficiente y estructurada.</p>
+        <p>A diferencia de las APIs REST tradicionales, donde los clientes 
+            pueden recibir datos innecesarios o insuficientes en una sola 
+            llamada, GraphQL permite que los clientes especifiquen exactamente 
+            los datos que necesitan y la estructura en la que deben ser 
+            devueltos, lo que reduce la cantidad de solicitudes necesarias 
+            para completar una tarea y mejora el rendimiento de la aplicación.</p>
+        <p>GraphQL también proporciona una gran flexibilidad al permitir a los clientes definir sus
+             propios tipos de datos y operaciones, lo que permite una mayor
+              personalización y capacidad de integración. Además, es independiente
+               del lenguaje y puede ser utilizado con cualquier lenguaje de programación.</p>
+        <h2>GraphQL ofrece varias ventajas para el desarrollo de aplicaciones:</h2>
+        <ol>
+            <li>Menor cantidad de solicitudes: GraphQL permite a los clientes solicitar exactamente los datos que necesitan en una sola llamada, lo que reduce la cantidad de solicitudes necesarias para completar una tarea y mejora el rendimiento de la aplicación.</li>
+            <li>Mayor flexibilidad: GraphQL permite a los clientes definir sus propios tipos de datos y operaciones, lo que permite una mayor personalización y capacidad de integración.</li>
+            <li>Documentación autogenerada: GraphQL genera automáticamente una documentación clara y fácil de leer sobre los tipos de datos disponibles y las operaciones que se pueden realizar en la API.</li>
+            <li>Evolución de la API sin interrupciones: GraphQL permite que la API evolucione sin interrupciones para los clientes, lo que significa que se pueden agregar campos y tipos de datos sin afectar a los clientes existentes.</li>
+            <li>Menor carga de trabajo para los desarrolladores: GraphQL simplifica el proceso de integración de datos, ya que los desarrolladores pueden solicitar solo los datos necesarios y trabajar con ellos en un formato fácilmente manejable.</li>
+            <li>Compatibilidad con múltiples fuentes de datos: GraphQL permite que los clientes soliciten datos de múltiples fuentes, lo que puede ser útil en aplicaciones que dependen de datos de varias fuentes diferentes.</li>
+        </ol>
+        <p>En general, GraphQL proporciona una forma eficiente y flexible de obtener y manipular datos en aplicaciones, lo que puede mejorar significativamente la experiencia del usuario y la eficiencia del desarrollo.
+        </p>
+        <h2>GraphQL se utiliza en una gran variedad de proyectos en diversas áreas, incluyendo:</h2>
+        <ol>
+            <li>Aplicaciones móviles: GraphQL es una solución popular para aplicaciones móviles, ya que permite solicitar solo los datos necesarios para la aplicación, lo que puede mejorar significativamente la velocidad de la aplicación y reducir la cantidad de datos utilizados.</li>
+            <li>Aplicaciones web: GraphQL también se utiliza en aplicaciones web para reducir la cantidad de solicitudes necesarias para obtener los datos necesarios y mejorar la experiencia del usuario.</li>
+            <li>Integración de servicios: GraphQL puede ser utilizado para integrar servicios de diferentes fuentes y permitir que los clientes soliciten datos de diferentes servicios en una sola llamada.</li>
+            <li>Análisis de datos: GraphQL se puede utilizar para solicitar y manipular grandes cantidades de datos de una manera estructurada y eficiente.</li>
+            <li>Internet de las cosas (IoT): GraphQL también puede ser utilizado en proyectos de IoT para permitir que los dispositivos soliciten y envíen datos en tiempo real.</li>
+        </ol>
+        <p>Algunos de los proyectos principales que utilizan GraphQL incluyen Facebook, GitHub, Shopify, Pinterest, Yelp, entre otros.</p>
+       
+        <h2>GraphQL y Python</h2>
+        <h3>Existen varias librerías de Python que pueden ser utilizadas para implementar GraphQL en proyectos. A continuación, se describen algunas de las principales:</h3>
+        <ol>
+            <li>Graphene:  es una de las principales librerías de Python para construir APIs basadas en GraphQL. Proporciona un conjunto de herramientas para definir los tipos de datos, resolver las consultas y manejar las mutaciones. También es compatible con una variedad de frameworks web de Python.</li>
+            <li>Ariadne: es otra librería popular de Python para implementar GraphQL. Ofrece un esquema de tipos de datos basado en Python, lo que significa que los tipos de datos y campos se pueden definir utilizando clases y atributos de Python.</li>
+            <li>Strawberry: es una librería relativamente nueva que se enfoca en la simplicidad y facilidad de uso. Utiliza la anotación de tipos de Python para definir los tipos de datos y proporciona herramientas para resolver las consultas y manejar las mutaciones.</li>
+            <li>GraphQL-core: es la librería principal de GraphQL en Python y proporciona una implementación completa de la especificación de GraphQL. Sin embargo, es una librería de bajo nivel y requiere más trabajo para implementar una API completa.</li>
+            <li>Graphene-Python-Extras: es una extensión de Graphene que proporciona herramientas adicionales, como la paginación y la validación de entrada, para simplificar el proceso de construcción de una API basada en GraphQL.</li>
+            <li>Taritflette: es otra librería popular de Python para construir APIs GraphQL. Se basa en la especificación de GraphQL y proporciona herramientas para definir el esquema de la API, resolver las consultas y manejar las mutaciones.</li>
+        </ol>
+        <p>En general, estas librerías proporcionan una forma fácil y eficiente de implementar GraphQL en proyectos de Python, y la elección de una depende de las necesidades específicas del proyecto.</p>
+        <h3>Graphene Uso</h3>
+        <p> para crear una API GraphQL en Python. En este ejemplo, definiremos un tipo de objeto "Persona" con dos campos (nombre y edad), y resolveremos una consulta para devolver una lista de personas.</p>
+        <p>Primero, necesitamos instalar Graphene. Puedes hacerlo ejecutando el siguiente comando en la terminal:</p>
+        <div class="code-container">
+            <pre><code class="language-html">
+            pip install graphene
+            </code></pre>
+            <button class="copy-button">Copiar</button>
+        </div>
+          <p>Luego, creamos un archivo app.py y escribimos el siguiente código:</p>
+          <div class="code-container">
+            <pre><code class="language-html">
+                <span id="blue">import</span>  graphene
+
+                <span id="blue">Class</span> <span id="red">Persona</span>(graphene.ObjectType):
+                    nombre = graphene.String()
+                    edad = graphene.Int()
+                
+                    <span id="blue">Class</span> <span id="red">Query</span>(graphene.ObjectType):
+                    personas = graphene.List(Persona)
+                
+                    <span id="blue">def</span> <span id="red">resolve_personas</span>(self, info):
+                        <span id="blue">return</span> [
+                            Persona(nombre=<span id="green">'Juan'</span> , edad=30, email=<span id="green">'juan@gmail.com'</span>),
+                            Persona(nombre=<span id="green">'Maria'</span>, edad=25, email=<span id="green">'maria@gmail.com'</span>),
+                            Persona(nombre=<span id="green">'Pedro'</span>, edad=35, email=<span id="green">'pedro@gmail.com'</span>)
+                            ]
+                
+                schema = graphene.Schema(query=Query)
+                
+                <span id="blue">if</span> __name__ == '__main__':
+                    query = <span id="green">'''
+                         query {
+                                personas {
+                                    nombre
+                                    edad
+                                }
+                             }
+                        '''
+                    </span>
+                    result = schema.execute(query)
+                    <span id="gold">print</span>(result.data)
+                    <span id="gris"># Recorrer los objetos del resultado</span>
+                    <span id="blue">for</span> obj <span id="blue">in</span> result.data:
+                        <span id="gris"># Recorrer los campos del objeto</span>
+                        <span id="blue">for</span> field <span id="blue">in</span> result.data[obj]:
+                            <span id="gris"># Imprimir el nombre del campo y su valor</span>
+                            <span id="gold">print</span>(<span id="green">f"Nombre : {field['nombre']}"</span>)
+                            <span id="gold">print</span>(<span id="green">f"Edad : {field['edad']}"</span>)
+                            <span id="gold">print</span><span id="green">(f"Correo : {field['email']}"</span>)
+                            <span id="gold">print</span>(<span id="green">"-----------------------------"</span>)
+            
+            </code></pre>
+            <button class="copy-button">Copiar</button>
+        </div>
+    </div>
+        <script>
+            const copyButtons = document.querySelectorAll('.copy-button');
+
+            copyButtons.forEach(function(copyButton) {
+              copyButton.addEventListener('click', function(event) {
+                // Evita que el evento de clic se propague a los elementos padres
+                event.stopPropagation();
+                event.preventDefault();
+                
+                // Encuentra el contenedor que contiene el botón presionado
+                const container = copyButton.closest('.code-container');
+                
+                // Encuentra el código dentro del contenedor
+                const codeSnippet = container.querySelector('code');
+                
+                // Selecciona y copia el texto del código
+                const range = document.createRange();
+                range.selectNode(codeSnippet);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges();
+                
+                // Muestra un mensaje de éxito
+                copyButton.textContent = 'Copiado';
+                copyButton.style.backgroundColor = 'red';
+                setTimeout(function() {
+                  copyButton.textContent = 'Copiar';
+                  copyButton.style.backgroundColor = 'blue';
+                }, 1500);
+              });
+            });
+            
+
+        </script>
+
+
+</body>
+</html>
